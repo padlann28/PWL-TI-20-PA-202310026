@@ -1,0 +1,24 @@
+.teks{
+     color: rgb(0, 0, 112);
+     margin-left: 20rem;
+     margin-top: 1rem;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.row {
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn {
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.su {
+     color: rgb(255, 255, 255);
+     width: 20rem;
+     margin-left: 25rem;
+}
+
+.ini {
+     background-color: rgb(207, 207, 207);
+}
