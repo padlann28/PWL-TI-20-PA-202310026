@@ -1,18 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import Home from '../src/components/Pertemuan-3/Modules/Components/Homes/Home';
-import reportWebVitals from './reportWebVitals';
-import Layout from './components/Pertemuan-3/Layouts/Layout';
-import AppRoute from './components/Pertemuan-3/apps/AppRoute' 
 import { BrowserRouter } from 'react-router-dom';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 
+// import App from './App';
+import AppRoute from './Pertemuan-4/apps/AppRoute';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
+const {PUBLIC_URL} = process.env;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={PUBLIC_URL}>
       <AppRoute />
     </BrowserRouter>
   </React.StrictMode>
@@ -22,4 +26,3 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-

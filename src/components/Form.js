@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import DatePicker from "react-datepicker"
+
 import "react-datepicker/dist/react-datepicker.css";
-import '../components/Form.css'
 
-
-
-export default function Form() { 
+export default function Form() {
 
   // const today = new Date().getFullYear();
   const initialDate = new Date().getFullYear();
@@ -35,16 +33,14 @@ export default function Form() {
 
   return (
     <div className='container'>
-      <div>
-        <h1 class='teks color-primary md-auto'>Form Pengisian Data Diri</h1>
-      </div>
 
       <div className='row g-5 mt-5'>
         <form onSubmit={handleInput}>
           <div className="row g-3">
-          <div className="col-sm-12 ">
+
+          <div className="col-sm-12">
               <label for="npm" className="form-label">NPM</label>
-              <input type="number" className="form-control ini" id="npm" value={npm} placeholder=""
+              <input type="number" className="form-control" id="npm" value={npm} placeholder=""
                 onInput={(event) => {
                   event.target.value = Math.max(0, parseInt(event.target.value)).toString().slice(0, 10)
                 }}
@@ -56,21 +52,21 @@ export default function Form() {
 
             <div className="col-sm-12">
               <label for="firstName" className="form-label">First name</label>
-              <input type="text" className="form-control ini" id="firstName" value={firstName} placeholder=""
+              <input type="text" className="form-control" id="firstName" value={firstName} placeholder=""
                 onChange={(event) => setFirstName(event.target.value)}
                 required />
             </div>
 
             <div className="col-sm-12">
               <label for="middleName" className="form-label">Middle name</label>
-              <input type="text" className="form-control ini" id="middleName" value={middleName} placeholder=""
+              <input type="text" className="form-control" id="middleName" value={middleName} placeholder=""
                 onChange={(event) => setMiddleName(event.target.value)}
               />
             </div>
 
             <div className="col-sm-12">
               <label for="lastName" className="form-label">Last name</label>
-              <input type="text" className="form-control ini" id="lastName" value={lastName} placeholder=""
+              <input type="text" className="form-control" id="lastName" value={lastName} placeholder=""
                 onChange={(event) => setLastName(event.target.value)}
                 required />
             </div>
@@ -78,21 +74,18 @@ export default function Form() {
             <div className="col-12">
               <label for="address" className="form-label">Birthdate</label>
               <DatePicker
-                className="form-control ini" 
+                className='form-control'
                 selected={date}
-                placeholderText='Enter Birthdate'
                 dateFormat="yyyy-MM-dd"
-                required={true}
-                onChange={(date) => {setDate(date)}}
-                    />
+                onChange={(date) => setDate(date)}
+                required
+              />
             </div>
 
             {/* <button className="w-100 btn btn-primary btn-lg" type="submit">Submit</button> */}
-            <div class='col-md-4'>
-            <button type="submit" className="btn btn-primary su" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="submit" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
               Submit
             </button>
-            </div>
 
           </div>
 
